@@ -18,9 +18,11 @@ var getDate = function() {
 getDate();
 
 // grab the live time and color-code the timeblocks based on live time
-var timeblockStatus = function() {
-    if() {}
-};
+// var timeblockStatus = function() {
+//     if(inputBoxHourEl) {
+//         JSON.parse(timeHour) < inputBoxHourEl
+//     }
+// };
 
 
 // Make the HTML timeblocks 'inputs'
