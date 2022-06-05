@@ -39,8 +39,7 @@ var timeblockStatus = function() {
 };
 timeblockStatus();
 
-var nineAMInput = document.getElementById('textarea-0').value = "My To-do"
-var currentNineAMInput = nineAMInput.nodeValue;
+// edit and save input changes
 $('#textarea-0').on('click', function() {
     var text = $(this).val();
     console.log(text);
@@ -54,7 +53,7 @@ $('#textarea-0').on('click', function() {
     textInput9AM.trigger('focus');
 
     $(textInput9AM).on('blur', function() {
-        console.log('new text has stayed');
+        
         var newText = $(this)
             .val();
         console.log(newText);
@@ -66,14 +65,22 @@ $('#textarea-0').on('click', function() {
     
 });
 
-// Make the save button functional to save entries to the localstorage
+// load saved inputs from localstorage
+var load9AMTasks = function() {
+    let task9AM = localStorage.getItem('9AM task');
 
+    if (!task9AM) {
+        task9AM = '';
+        return false;
+    }
+    
+    $('#textarea-0').val(JSON.parse(task9AM)); 
+};
+load9AMTasks();
 
-
-
-
-
-
-
-
-// ensure saved events persist after saving
+/* To-Do:
+- refactor for jquery
+- copy/paste then change all 'save input change' for each respective hour
+- copy/paste then change all 'load saved inputs' for each respective hour
+- write README file
+*/
