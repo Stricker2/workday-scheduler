@@ -32,8 +32,9 @@ textarea {
 }
 
 .container {
-  display: block;
-  width: 100vw;
+display: block;
+justify-content: center;  
+width: 100vw;
 }
 
 .row {
