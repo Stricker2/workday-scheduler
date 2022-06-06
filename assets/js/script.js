@@ -261,8 +261,6 @@ $('#textarea-8').on('click', function() {
     
 });
 
-
-
 // load saved inputs from localstorage
 var load9AMTasks = function() {
     let task9AM = localStorage.getItem('9AM task');
@@ -276,9 +274,102 @@ var load9AMTasks = function() {
 };
 load9AMTasks();
 
+var load10AMTasks = function() {
+    let task10AM = localStorage.getItem('10AM task');
+
+    if (!task10AM) {
+        task10AM = '';
+        return false;
+    }
+    
+    $('#textarea-1').val(JSON.parse(task10AM)); 
+};
+load10AMTasks();
+
+var load11AMTasks = function() {
+    let task11AM = localStorage.getItem('11AM task');
+
+    if (!task11AM) {
+        task11AM = '';
+        return false;
+    }
+    
+    $('#textarea-2').val(JSON.parse(task11AM)); 
+};
+load11AMTasks();
+
+var load12PMTasks = function() {
+    let task12PM = localStorage.getItem('12PM task');
+
+    if (!task12PM) {
+        task12PM = '';
+        return false;
+    }
+    
+    $('#textarea-3').val(JSON.parse(task12PM)); 
+};
+load12PMTasks();
+
+var load1PMTasks = function() {
+    let task1PM = localStorage.getItem('1PM task');
+
+    if (!task1PM) {
+        task1PM = '';
+        return false;
+    }
+    
+    $('#textarea-4').val(JSON.parse(task1PM)); 
+};
+load1PMTasks();
+
+var load2PMTasks = function() {
+    let task2PM = localStorage.getItem('2PM task');
+
+    if (!task2PM) {
+        task2PM = '';
+        return false;
+    }
+    
+    $('#textarea-5').val(JSON.parse(task2PM)); 
+};
+load2PMTasks();
+
+var load3PMTasks = function() {
+    let task3PM = localStorage.getItem('3PM task');
+
+    if (!task3PM) {
+        task3PM = '';
+        return false;
+    }
+    
+    $('#textarea-6').val(JSON.parse(task3PM)); 
+};
+load3PMTasks();
+
+var load4PMTasks = function() {
+    let task4PM = localStorage.getItem('4PM task');
+
+    if (!task4PM) {
+        task4PM = '';
+        return false;
+    }
+    
+    $('#textarea-7').val(JSON.parse(task4PM)); 
+};
+load4PMTasks();
+
+var load5PMTasks = function() {
+    let task5PM = localStorage.getItem('5PM task');
+
+    if (!task5PM) {
+        task5PM = '';
+        return false;
+    }
+    
+    $('#textarea-8').val(JSON.parse(task5PM)); 
+};
+load5PMTasks();
+
 /* To-Do:
-- refactor for jquery
-- copy/paste then change all 'save input change' for each respective hour
-- copy/paste then change all 'load saved inputs' for each respective hour
 - write README file
 */
